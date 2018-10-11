@@ -1,0 +1,46 @@
+/* Dialog style */
+.ui-dialog{
+  padding: 0;
+  border-top: 0;
+  border-radius: 0 7px 0 7px;
+  box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.75);
+}
+
+textarea.title-input{
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  border-color: #f5bd2b;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.18);
+}
+
+.label-title-event{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #888585;
+}
+
+.ui-dialog-titlebar{
+  border-radius: 0 7px 0 0;
+  border: 0;
+  background: #fdc453;
+}
+.ui-dialog .ui-dialog-buttonpane{
+  border-top: 0;
+}
+
+.ui-dialog-buttonpane .ui-button{
+  border-radius: 0;
+  border: 0;
+  background: #fdc453;
+  color: #fff;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+.wc-hour-header, .wc-business-hours{
+  background: #46b2ff;
+  color: #fff;
+}

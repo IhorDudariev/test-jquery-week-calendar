@@ -1,0 +1,63 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.calendar-container{
+  display: flex;
+}
+
+.calendar-wrapper{
+  overflow: auto;
+}
+
+.calendar{
+  min-width: 800px;
+}
+
+.wc-toolbar{
+  background:#31424e;
+  color: #fff;
+  border:none;
+}
+
+.ui-buttonset .ui-button{
+  background: #fff;
+}
+
+.wc-header{
+  background: #fff;
+}
+
+.wc-header .wc-today.wc-day-column-header{
+  border: 0;
+  color: #32b132;
+  font-weight: 700;
+}
+
+.wc-cal-event{
+  background: #32b132;
+  min-height: 29px;
+}
+
+.title-card-event{
+  height: calc(100% - 33px);
+  min-height: 15px;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.wc-time-slots .wc-today.ui-state-active{
+  background: rgba(172, 195, 241, .10);
+  border-color: #d3d3d3;
+}
+
+@media (max-width: 991px) {
+  .calendar-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .calendar-wrapper{
+    width: 100%;
+  }
+}
