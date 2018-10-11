@@ -106,11 +106,9 @@ $(document).ready(function() {
 
   //init and open dialog to set title to event
   function openDialog(element, calEvent) {
-
     element.parent().append("<form id='myForm'><label for='title-event' class='label-title-event'>Title Event:</label><textarea id='title-event' class='title-input' name='title-event' rows='4'>"+calEvent.title+"</textarea></form>")
 
     $('#myForm').dialog({
-      autoOpen: false,
       position: {
         my: 'right top',
         at: 'left top',
