@@ -33,6 +33,7 @@ $(document).ready(function() {
     data: eventData,
     allowCalEventOverlap: true,
     overlapEventsSeparate: true,
+    headerSeparator: ' ',
     switchDisplay: {'1 day': 1, '3 next days': 3, 'work week': 5, 'full week': 7},
     height: function($calendar) {
       return $(window).height()
@@ -56,6 +57,12 @@ $(document).ready(function() {
     eventDrop: function(newCalEvent, newCalEvent) {
       $('#clone-draggable').remove()
     },
+    eventResize: function(newCalEvent) {
+       $('#calendar').weekCalendar('updateEvent', newCalEvent)
+    },
+    resizable: function (params) {
+      return true
+    },
     calendarAfterLoad: function (calendar) {
       //change datepicker date if the month has changed
       var dateNew = new Date(calendar.data('startDate'));
@@ -78,6 +85,7 @@ $(document).ready(function() {
     var startDate = calEvent.start.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).toLowerCase()
     var endDate = calEvent.end.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).toLowerCase()
     element.html("<div class='title-card-event'>"+calEvent.title+"</div>"+startDate+" to "+endDate);
+
   }
 
   //call when event card is dragging
